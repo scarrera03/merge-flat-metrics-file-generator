@@ -50,7 +50,10 @@ htmlcov/
 .cache/
 .pytest_cache/
 
-# Excel / CSV if you don’t want to track samples
-# (Opcional, solo si querés que NO se suban datos)
+# Ignore generated CSV files
+*.csv
+
+# OPTIONAL: Ignore Excel data files
+# Uncomment these lines if you do NOT want to upload Excel files:
 # *.xlsx
-# *.csv
+# *.xls
