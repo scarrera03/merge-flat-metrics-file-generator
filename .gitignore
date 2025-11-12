@@ -1,0 +1,56 @@
+# macOS
+.DS_Store
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# SQLite databases
+*.sqlite3
+
+# System files
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+
+# pytest
+.cache/
+.pytest_cache/
+
+# Excel / CSV if you don’t want to track samples
+# (Opcional, solo si querés que NO se suban datos)
+# *.xlsx
+# *.csv
