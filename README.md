@@ -12,9 +12,7 @@ It automatically skips non-relevant sections such as “Includes Depreciation”
 - Detects and normalizes headers automatically (case- and whitespace-insensitive).
 - Keeps all columns from **Revenue → Cash Flow**, inclusive.
 - Outputs a CSV file with the same base name as the input file.
-- Provides optional flags:
-  - `--sheet` → specify a sheet name to process directly.
-  - `--list-sheets` → list all available sheets in the workbook.
+
 
 ---
 
@@ -49,18 +47,6 @@ This reads your Excel file and generates:
 Data for File Combining Test.csv
 ```
 
-### Specify a sheet
-If your workbook has multiple sheets and you want to process just one:
-```bash
-python3 merger.py -i "Data for File Combining Test.xlsx" --sheet "Flat"
-```
-
-### List available sheets
-```bash
-python3 merger.py -i "Data for File Combining Test.xlsx" --list-sheets
-```
-
----
 
 ## How It Works
 
@@ -85,13 +71,6 @@ python3 merger.py -i "Data for File Combining Test.xlsx" --list-sheets
 
 ## Example
 
-**Input:**  
-`Data for File Combining Test.xlsx`
-
-| Company Name | Year | Month | Version | View | Revenue | Cost of Goods Sold1 | Gross Margin | Cash Flow | Plus: Depreciation |
-|---------------|------|--------|----------|------|----------|---------------------|---------------|------------|--------------------|
-| Company A | 2024 | December | B | 2024B | 500000 | 420000 | 80000 | 65000 | 1000 |
-
 **Output (CSV):**
 
 | Company Name | Year | Month | Version | View | Revenue | Cost of Goods Sold1 | Gross Margin | Cash Flow |
@@ -109,15 +88,14 @@ python3 merger.py -h
 
 **Output:**
 ```
-usage: merger.py -i <input_excel_file> [--sheet SHEET_NAME] [--list-sheets]
+usage: merger.py -i <input_excel_file>
 
 Extract columns from 'Revenue' to 'Cash Flow' (inclusive) from an Excel file and save as CSV.
 
 options:
   -h, --help       show this help message and exit
   -i, --input      Path to the Excel file to process (e.g., data.xlsx)
-  --sheet          Optional sheet name to read
-  --list-sheets    List sheet names and exit
+
 ```
 
 ---
